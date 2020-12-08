@@ -14,10 +14,6 @@ public class DemoApp {
             public boolean isValid(String word) {
                 return word.length() > 5;
             }
-
-            public boolean isnotValid() {
-                return false;
-            }
         };
         //textPrinter.printFilteredWords(anonymouseFilter);
 
@@ -41,6 +37,9 @@ public class DemoApp {
 
         // Constructorreferentie
         textPrinter.printFilteredWords(Boolean::new);
+
+        WordFilter wordFilter = word -> word.length() > 5;
+        textPrinter.printFilteredWords(wordFilter);
     }
 
     public static boolean isValid(String word){

@@ -12,5 +12,15 @@ public class FinalVariableDemo {
 
         final int[] sum = new int[]{0};
         intList.forEach(number -> sum[0] += number);
+
+        for (int i : new int[]{1,2,3}) {
+            System.out.println(i);
+        }
+
+        for (Integer i : intList) {
+            System.out.println(i);
+        }
+
+        intList.forEach(System.out::println);
     }
 }
